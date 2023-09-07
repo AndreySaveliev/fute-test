@@ -29,20 +29,25 @@ export const Selector = ({
   return (
     <div className="flex flex-row justify-between">
       <h2 className="">{text}</h2>
-      <div className="flex" onClick={() => setOpen(!open)}>
+      <div
+        className="flex min-w-[90px] justify-end"
+        onClick={() => setOpen(!open)}
+      >
         <p className="">{selected}</p>
         <BsChevronCompactDown className="self-center" />
         <div
           className={`${
             open ? "block" : "hidden"
-          } absolute p-2 bg-primary right-0 z-10`}
+          } absolute p-2 bg-primary z-10`}
         >
-          {open &&
-            options.map((option) => (
-              <p onClick={() => handleSelectOption(option)} key={option}>
-                {option}
-              </p>
-            ))}
+          <div className="flex flex-col">
+            {open &&
+              options.map((option) => (
+                <button onClick={() => handleSelectOption(option)} key={option}>
+                  {option}
+                </button>
+              ))}
+          </div>
         </div>
       </div>
     </div>

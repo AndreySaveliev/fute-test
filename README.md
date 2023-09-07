@@ -1,27 +1,15 @@
-# React + TypeScript + Vite
+# React + Redux + TypeScript + Vite + Googlo Books API
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Простое приложение ~~с ужасным дизайном~~ для поиска книг. Все взаимодейсвтие с Google API идет через redux async thunk. Для стилизация приложения был использован tailwind. Сборщик Vite.
 
-Currently, two official plugins are available:
+## Функционал
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Поиск книги по названию
+- Филтрация по категориям
+- Сортировка
 
-## Expanding the ESLint configuration
+## Запуск
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
-```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+1. Склонировать репо к себе на машину.
+2. Установиться зависимости `npm install`
+3. Запустить дев сервер `npm run dev `
